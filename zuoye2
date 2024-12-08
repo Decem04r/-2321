@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>成语画龙点睛 - 文生图展示</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+.header {
+  background: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+.content {
+  background: white;
+  padding: 2rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h1 {
+  color: #333;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  margin-bottom: 0.5rem;
+}
+img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #4CAF50;
+  color: white;
+  margin-top: 1rem;
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <h1>成语文生图展示页面</h1>
+</header>
+
+<div class="container">
+  <section class="content">
+    <h1>成语：画龙点睛 <small>(huà lóng diǎn jīng)</small></h1>
+    <ul>
+      <li><strong>描述：</strong>为一幅画中的龙添上眼睛，使整个画面生动起来。传说中，这种做法能使画中的龙活过来。</li>
+      <li><strong>要求：</strong>
+        <ul>
+          <li>生成的画面应该是一幅中国风水墨画风格的龙，龙的眼睛要特别突出。</li>
+          <li>文生图中的文本使用无序列表（ul）展示成语、拼音和描述。</li>
+        </ul>
+      </li>
+    </ul>
+    <p>根据上述描述，AI生成了以下画面：</p>
+    <img src="https://wanx.alicdn.com/wanx/1698609723575485/text_to_image_lite_v2/87eca3f31d8a42358357e6a2f6a1eff3_0.png?x-oss-process=image/watermark,image_aW1nL3dhdGVyMjAyNDExMjkwLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSxtX2ZpeGVkLHdfMzAzLGhfNTI=,t_80,g_se,x_10,y_10/format,webp" alt="画龙点睛生成图">
+  </section>
+</div>
+
+<footer>
+  <p>&copy; 2024 成语文生图展示页面. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

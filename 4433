@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>双城之战：上城与下城的互动</title>
+<style>
+body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
+.container { width: 80%; margin: auto; overflow: hidden; }
+.header, .footer { background: #333; color: #fff; padding: 1em 0; text-align: center; }
+.content { padding: 20px; background: #fff; margin-top: 20px; }
+h1, h2, h3, h4, h5, h6 { color: #333; }
+mark { background-color: #ffeb3b; }
+ul, ol { list-style-position: inside; }
+dl dt { font-weight: bold; }
+ruby rt { font-size: smaller; }
+sup, sub { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+.character { display: flex; align-items: center; margin-bottom: 20px; }
+.character img { width: 100px; height: auto; margin-right: 20px; border-radius: 50%; }
+.interactive { margin-top: 20px; }
+.interactive button { background-color: #333; color: white; border: none; padding: 10px 20px; cursor: pointer; }
+.interactive button:hover { background-color: #555; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header class="header">
+    <h1>双城之战：上城与下城的互动</h1>
+  </header>
+
+  <section class="content">
+    <article>
+      <h2>序章：城市的两面性</h2>
+      <p>在遥远的地方，有一座城市被分为两个部分——<mark>上城</mark>和<mark>下城</mark>。这两者之间存在着一种微妙的平衡...</p>
+
+      <h3>上城的优势</h3>
+      <ul>
+        <li>资源丰富</li>
+        <li>教育水平高</li>
+        <li>科技发达</li>
+      </ul>
+
+      <h3>下城的特色</h3>
+      <ol>
+        <li>文化传承悠久</li>
+        <li>社区紧密联系</li>
+        <li>手工艺精湛</li>
+      </ol>
+
+      <h4>术语解释</h4>
+      <dl>
+        <dt><abbr title="Upper City">UC</abbr></dt>
+        <dd>指代上城，通常拥有更好的基础设施和发展机会。</dd>
+        <dt><abbr title="Lower City">LC</abbr></dt>
+        <dd>指代下城，这里的人们以顽强的生命力和传统技艺著称。</dd>
+      </dl>
+
+      <h5>故事的关键点</h5>
+      <p>在一场决定性的战役中，<strong>上城</strong>和<strong>下城</strong>必须联合起来对抗共同的敌人。这场战斗不仅是力量的较量，更是智慧和勇气的考验。</p>
+
+      <h6>历史转折</h6>
+      <p>最终，双方意识到合作的重要性，并形成了前所未有的联盟。<em>这是和平的新篇章</em>。</p>
+
+      <p>注释：<ruby>和<rt>平</rt></ruby>是双方共同追求的目标。</p>
+
+      <p>在庆祝胜利时，人们举杯齐声喊道：“为<sup>自由</sup>和<sub>团结</sub>！”</p>
+
+      <!-- 新增内容 -->
+      <h3>重要人物</h3>
+      <div class="character">
+        <img src="path/to/image-of-leader.jpg" alt="领袖肖像">
+        <div>
+          <h4>上城领袖</h4>
+          <p>作为上城的领导者，他不仅是一位卓越的战略家，还是一位深思熟虑的改革者，致力于推动城市的科技进步。</p>
+        </div>
+      </div>
+      <div class="character">
+        <img src="path/to/image-of-artisan.jpg" alt="工匠肖像">
+        <div>
+          <h4>下城工匠</h4>
+          <p>这位来自下城的工匠以其精湛的手艺闻名，她的作品成为了连接两城人民的重要纽带。</p>
+        </div>
+      </div>
+
+      <h3>互动环节</h3>
+      <div class="interactive">
+        <p>您认为哪位角色对双城之战的影响最大？请投票：</p>
+        <button onclick="alert('感谢您的投票！')">上城领袖</button>
+        <button onclick="alert('感谢您的投票！')">下城工匠</button>
+      </div>
+
+      <h3>多媒体展示</h3>
+      <p>观看下面的视频了解双城之战的历史。</p>
+      <video controls width="100%">
+        <source src="path/to/video.mp4" type="video/mp4">
+        您的浏览器不支持 video 标签。
+      </video>
+    </article>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2024 双城之战官方网站. 版权所有.</p>
+  </footer>
+</div>
+
+</body>
+</html>

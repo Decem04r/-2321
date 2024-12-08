@@ -2,15 +2,16 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>双城之战：上城与下城的互动</title>
+<title>双城之战：皮尔特沃夫与祖安的互动</title>
 <style>
-body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
+body { font-family: 'Georgia', serif; background-color: #f4f4f4; margin: 0; padding: 0; color: #333; }
 .container { width: 80%; margin: auto; overflow: hidden; }
-.header, .footer { background: #333; color: #fff; padding: 1em 0; text-align: center; }
-.content { padding: 20px; background: #fff; margin-top: 20px; }
-h1, h2, h3, h4, h5, h6 { color: #333; }
-mark { background-color: #ffeb3b; }
-ul, ol { list-style-position: inside; }
+.header, .footer { background: #2c3e50; color: #fff; padding: 1em 0; text-align: center; }
+.content { padding: 20px; background: #fff; margin-top: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+h1, h2, h3, h4, h5, h6 { color: #2c3e50; margin-bottom: 10px; }
+mark { background-color: #ffeb3b; padding: 2px; }
+p { line-height: 1.6; margin-bottom: 15px; }
+ul, ol { list-style-position: inside; margin-left: 20px; }
 dl dt { font-weight: bold; }
 ruby rt { font-size: smaller; }
 sup, sub { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
@@ -19,46 +20,54 @@ sub { bottom: -0.25em; }
 .character { display: flex; align-items: center; margin-bottom: 20px; }
 .character img { width: 100px; height: auto; margin-right: 20px; border-radius: 50%; }
 .interactive { margin-top: 20px; }
-.interactive button { background-color: #333; color: white; border: none; padding: 10px 20px; cursor: pointer; }
-.interactive button:hover { background-color: #555; }
+.interactive button { background-color: #3498db; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; transition: background-color 0.3s; }
+.interactive button:hover { background-color: #2980b9; }
+.quote { font-style: italic; font-size: 1.2em; color: #7f8c8d; margin: 20px 0; }
+.blockquote { background-color: #ecf0f1; padding: 15px; border-left: 5px solid #3498db; margin: 20px 0; }
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
 
 <div class="container">
   <header class="header">
-    <h1>双城之战：上城与下城的互动</h1>
+    <h1>双城之战：皮尔特沃夫与祖安的互动</h1>
   </header>
 
   <section class="content">
     <article>
-      <h2>序章：城市的两面性</h2>
-      <p>在遥远的地方，有一座城市被分为两个部分——<mark>上城</mark>和<mark>下城</mark>。这两者之间存在着一种微妙的平衡...</p>
+      <h2>序章：科技之城与化学之地</h2>
+      <p>在符文之地的心脏地带，矗立着两座截然不同的城市——<mark>皮尔特沃夫</mark>和<mark>祖安</mark>。一座是进步与光明的象征，另一座则是暗影与力量的源泉...</p>
 
-      <h3>上城的优势</h3>
+      <blockquote class="blockquote">
+        <p>"在这片土地上，两个世界相互依存，却又各自为战。"</p>
+        <footer>- 双城智者</footer>
+      </blockquote>
+
+      <h3>皮尔特沃夫的优势</h3>
       <ul>
-        <li>资源丰富</li>
-        <li>教育水平高</li>
-        <li>科技发达</li>
+        <li>科技进步迅速，引领未来的创新。</li>
+        <li>教育体系完善，培养了无数杰出人才。</li>
+        <li>法律秩序严明，保障了公民的权利。</li>
       </ul>
 
-      <h3>下城的特色</h3>
+      <h3>祖安的特色</h3>
       <ol>
-        <li>文化传承悠久</li>
-        <li>社区紧密联系</li>
-        <li>手工艺精湛</li>
+        <li>化学技术发达，孕育了独特的工业文明。</li>
+        <li>地下文化繁荣，展现了别样的生活风貌。</li>
+        <li>社区紧密联系，邻里间充满互助精神。</li>
       </ol>
 
       <h4>术语解释</h4>
       <dl>
-        <dt><abbr title="Upper City">UC</abbr></dt>
-        <dd>指代上城，通常拥有更好的基础设施和发展机会。</dd>
-        <dt><abbr title="Lower City">LC</abbr></dt>
-        <dd>指代下城，这里的人们以顽强的生命力和传统技艺著称。</dd>
+        <dt><abbr title="Piltover">PT</abbr></dt>
+        <dd>指代皮尔特沃夫，这里以科技和法治闻名。</dd>
+        <dt><abbr title="Zaun">ZN</abbr></dt>
+        <dd>指代祖安，这个区域以其化学技术和地下经济著称。</dd>
       </dl>
 
       <h5>故事的关键点</h5>
-      <p>在一场决定性的战役中，<strong>上城</strong>和<strong>下城</strong>必须联合起来对抗共同的敌人。这场战斗不仅是力量的较量，更是智慧和勇气的考验。</p>
+      <p>在一场决定性的冲突中，<strong>皮尔特沃夫</strong>和<strong>祖安</strong>必须联合起来对抗共同的敌人。这场战斗不仅是力量的较量，更是智慧和勇气的考验。</p>
 
       <h6>历史转折</h6>
       <p>最终，双方意识到合作的重要性，并形成了前所未有的联盟。<em>这是和平的新篇章</em>。</p>
@@ -70,33 +79,52 @@ sub { bottom: -0.25em; }
       <!-- 新增内容 -->
       <h3>重要人物</h3>
       <div class="character">
-        <img src="path/to/image-of-leader.jpg" alt="领袖肖像">
+        <img src="path/to/image-of-viktor.jpg" alt="维克托肖像">
         <div>
-          <h4>上城领袖</h4>
-          <p>作为上城的领导者，他不仅是一位卓越的战略家，还是一位深思熟虑的改革者，致力于推动城市的科技进步。</p>
+          <h4>维克托 - 科技先锋</h4>
+          <p>作为皮尔特沃夫著名的科学家，维克托致力于通过科技改善人类生活。他的发明不仅推动了城市的进步，也带来了深刻的道德思考。</p>
         </div>
       </div>
       <div class="character">
-        <img src="path/to/image-of-artisan.jpg" alt="工匠肖像">
+        <img src="path/to/image-of-vi.jpg" alt="蔚肖像">
         <div>
-          <h4>下城工匠</h4>
-          <p>这位来自下城的工匠以其精湛的手艺闻名，她的作品成为了连接两城人民的重要纽带。</p>
+          <h4>蔚 - 执法官</h4>
+          <p>蔚是一位来自皮尔特沃夫底层的执法官，她以力量和正义感著称。她的目标是维护城市的和平与秩序，在双城之战中扮演了关键角色。</p>
         </div>
       </div>
+      <div class="character">
+        <img src="path/to/image-of-jinx.jpg" alt="金克斯肖像">
+        <div>
+          <h4>金克斯 - 混乱制造者</h4>
+          <p>金克斯的行为往往带来混乱和灾难，但她也是双城之战故事中不可或缺的一部分。她的存在揭示了社会问题和个人成长的主题。</p>
+        </div>
+      </div>
+      <div class="character">
+        <img src="path/to/image-of-caitlyn.jpg" alt="凯特琳肖像">
+        <div>
+          <h4>凯特琳 - 警长</h4>
+          <p>作为皮尔特沃夫警长，凯特琳负责维持城市的安全。她在调查过程中发现了影响两城关系的重要线索，对于解决冲突起到了重要作用。</p>
+        </div>
+      </div>
+
+      <h3>更多故事片段</h3>
+      <p>在这场战争中，有无数英雄的故事。例如，一位年轻的图书管理员在战火中保护了珍贵的历史文献；又比如一位老工匠用最后的力量修复了一座古老的桥梁，使得援军能够顺利抵达。</p>
+
+      <p>这些个人的故事构成了双城之战的宏大叙事，它们证明了即使是普通人，在关键时刻也可以成为改变历史的英雄。</p>
 
       <h3>互动环节</h3>
       <div class="interactive">
         <p>您认为哪位角色对双城之战的影响最大？请投票：</p>
-        <button onclick="alert('感谢您的投票！')">上城领袖</button>
-        <button onclick="alert('感谢您的投票！')">下城工匠</button>
+        <button onclick="alert('感谢您的投票！')">维克托</button>
+        <button onclick="alert('感谢您的投票！')">蔚</button>
+        <button onclick="alert('感谢您的投票！')">金克斯</button>
+        <button onclick="alert('感谢您的投票！')">凯特琳</button>
       </div>
 
-      <h3>多媒体展示</h3>
-      <p>观看下面的视频了解双城之战的历史。</p>
-      <video controls width="100%">
-        <source src="path/to/video.mp4" type="video/mp4">
-        您的浏览器不支持 video 标签。
-      </video>
+      <div class="quote">
+        <p>"当双城携手共进，没有什么困难是无法克服的。"</p>
+      </div>
+
     </article>
   </section>
 

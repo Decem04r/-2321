@@ -24,6 +24,7 @@ body {
   margin-top: 20px; 
   border-radius: 10px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  color: #333; /* 调整为深色文字 */
 }
 h1, h2, h3, h4, h5, h6 { 
   color: #2c3e50; 
@@ -122,8 +123,57 @@ sub { bottom: -0.25em; }
   color: #333;
 }
 
+/* 投票结果样式 */
+.vote-result {
+  margin-top: 20px;
+}
+
+.vote-bar {
+  width: 100%;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.vote-bar div {
+  height: 20px;
+  background-color: #6200EA;
+  width: 0;
+  transition: width 0.5s;
+}
+
+.vote-label {
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<script>
+function updateVotes() {
+  // 示例投票数据，实际应用中应从服务器获取
+  const votes = {
+    "维克托": 45,
+    "蔚": 30,
+    "金克斯": 15,
+    "凯特琳": 10
+  };
+
+  let totalVotes = Object.values(votes).reduce((a, b) => a + b, 0);
+
+  for (let character in votes) {
+    let percentage = (votes[character] / totalVotes) * 100;
+    document.querySelector(`#${character}-bar`).style.width = `${percentage}%`;
+    document.querySelector(`#${character}-label`).innerText = `${character}: ${votes[character]}票 (${percentage.toFixed(1)}%)`;
+  }
+}
+
+// 页面加载完成后调用函数更新投票结果
+window.onload = function() {
+  updateVotes();
+};
+</script>
 </head>
 <body>
 
@@ -223,6 +273,17 @@ sub { bottom: -0.25em; }
         <button onclick="alert('感谢您的投票！')">蔚</button>
         <button onclick="alert('感谢您的投票！')">金克斯</button>
         <button onclick="alert('感谢您的投票！')">凯特琳</button>
+      </div>
+
+      <div class="vote-result">
+        <div class="vote-label" id="viktor-label"></div>
+        <div class="vote-bar"><div id="viktor-bar"></div></div>
+        <div class="vote-label" id="vi-label"></div>
+        <div class="vote-bar"><div id="vi-bar"></div></div>
+        <div class="vote-label" id="jinx-label"></div>
+        <div class="vote-bar"><div id="jinx-bar"></div></div>
+        <div class="vote-label" id="caitlyn-label"></div>
+        <div class="vote-bar"><div id="caitlyn-bar"></div></div>
       </div>
 
       <div class="quote">

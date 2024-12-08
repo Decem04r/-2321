@@ -2,41 +2,45 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>双城之战：皮尔特沃夫与祖安的互动</title>
+<title>双城之诗：皮尔特沃夫与祖安的交响</title>
 <style>
 body { 
   font-family: 'Georgia', serif; 
-  background-color: #1e1e2f; /* 深邃的夜空背景 */
+  background-image: url('https://example.com/path/to/starry-sky.jpg'); /* 使用一张夜空星图作为背景 */
+  background-size: cover;
+  background-attachment: fixed;
   margin: 0; 
   padding: 0; 
-  color: #e0e0e0; /* 浅灰文字颜色 */
+  color: #e0e0e0; 
 }
-.container { width: 80%; margin: auto; overflow: hidden; }
+.container { width: 80%; max-width: 1200px; margin: auto; overflow: hidden; }
 .header, .footer { 
-  background: linear-gradient(90deg, #4A148C, #6200EA); /* 祖安紫色到皮尔特沃夫紫色的渐变 */
+  background: linear-gradient(90deg, #5E35B1, #7C4DFF); /* 更深邃的紫色渐变 */
   color: #fff; 
   padding: 1em 0; 
   text-align: center; 
 }
 .content { 
   padding: 20px; 
-  background: #fff; 
+  background: rgba(255,255,255,0.9); /* 半透明白色背景 */
   margin-top: 20px; 
   border-radius: 10px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  color: #333; /* 调整为深色文字 */
+  color: #333; 
 }
 h1, h2, h3, h4, h5, h6 { 
   color: #2c3e50; 
   margin-bottom: 10px; 
+  font-weight: bold;
 }
 mark { 
   background-color: #ffeb3b; 
   padding: 2px; 
 }
 p { 
-  line-height: 1.6; 
+  line-height: 1.8; 
   margin-bottom: 15px; 
+  font-style: italic;
 }
 ul, ol { 
   list-style-position: inside; 
@@ -66,71 +70,64 @@ sub { bottom: -0.25em; }
   height: auto; 
   margin-right: 20px; 
   border-radius: 50%; 
+  border: 4px solid #fff; /* 添加边框 */
 }
 .interactive { 
   margin-top: 20px; 
+  text-align: center;
 }
 .interactive button { 
-  background-color: #6200EA; /* 祖安紫色按钮 */
+  background-color: #7C4DFF; 
   color: white; 
   border: none; 
   padding: 10px 20px; 
   cursor: pointer; 
   border-radius: 5px; 
   transition: background-color 0.3s; 
+  font-size: 1rem;
 }
 .interactive button:hover { 
-  background-color: #4A148C; /* 按钮悬停时更深的祖安紫色 */
+  background-color: #5E35B1; 
 }
 .quote { 
   font-style: italic; 
   font-size: 1.2em; 
-  color: #B39DDB; /* 紫色引用文字 */
+  color: #B39DDB; 
   margin: 20px 0; 
+  text-align: center;
 }
 .blockquote { 
-  background-color: #ecf0f1; 
+  background-color: rgba(255,255,255,0.8); 
   padding: 15px; 
-  border-left: 5px solid #6200EA; /* 紫色边框 */
+  border-left: 5px solid #7C4DFF; 
   margin: 20px 0; 
 }
 
 /* 新增部分 */
 .piltover-section {
-  background-color: #ECEFF1; /* 皮尔特沃夫浅蓝灰色 */
+  background-color: rgba(236,239,241,0.8); 
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
 }
 
 .zaun-section {
-  background-color: #3E2723; /* 祖安深棕色 */
+  background-color: rgba(62,39,35,0.8); 
   color: #ffffff;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
 }
 
-.piltover-section h3, .zaun-section h3 {
-  color: #2c3e50;
-}
-
-.piltover-section p, .zaun-section p {
-  color: #333;
-}
-
-.piltover-section ul, .zaun-section ul {
-  color: #333;
-}
-
 /* 投票结果样式 */
 .vote-result {
   margin-top: 20px;
+  text-align: center;
 }
 
 .vote-bar {
   width: 100%;
-  background-color: #f3f3f3;
+  background-color: rgba(243,243,243,0.8);
   border-radius: 5px;
   overflow: hidden;
   margin-bottom: 10px;
@@ -138,7 +135,7 @@ sub { bottom: -0.25em; }
 
 .vote-bar div {
   height: 20px;
-  background-color: #6200EA;
+  background-color: #7C4DFF;
   width: 0;
   transition: width 0.5s;
 }
@@ -146,13 +143,58 @@ sub { bottom: -0.25em; }
 .vote-label {
   font-size: 0.9em;
   margin-bottom: 5px;
+  text-align: center;
+}
+
+.user-interactions textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.user-interactions button {
+  background-color: #7C4DFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.user-interactions button:hover {
+  background-color: #5E35B1;
+}
+
+.faq details {
+  margin-bottom: 20px;
+}
+
+.faq summary {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 5px;
+}
+
+.faq p {
+  padding: 10px;
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 0 0 5px 5px;
+}
+
+@media (max-width: 768px) {
+  .container { width: 95%; }
+  .character img { width: 80px; }
 }
 
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <script>
 function updateVotes() {
-  // 示例投票数据，实际应用中应从服务器获取
   const votes = {
     "维克托": 45,
     "蔚": 30,
@@ -169,7 +211,6 @@ function updateVotes() {
   }
 }
 
-// 页面加载完成后调用函数更新投票结果
 window.onload = function() {
   updateVotes();
 };
@@ -179,13 +220,13 @@ window.onload = function() {
 
 <div class="container">
   <header class="header">
-    <h1>双城之战：皮尔特沃夫与祖安的互动</h1>
+    <h1>双城之诗：皮尔特沃夫与祖安的交响</h1>
   </header>
 
   <section class="content">
     <article>
-      <h2>序章：科技之城与化学之地</h2>
-      <p>在符文之地的心脏地带，矗立着两座截然不同的城市——<mark>皮尔特沃夫</mark>和<mark>祖安</mark>。一座是进步与光明的象征，另一座则是暗影与力量的源泉...</p>
+      <h2>序章：光明与暗影的对话</h2>
+      <p>在符文之地的心脏地带，矗立着两座城市——<mark>皮尔特沃夫</mark>与<mark>祖安</mark>。一者是进步与智慧的灯塔，另一者则是力量与未知的深渊...</p>
 
       <blockquote class="blockquote">
         <p>"在这片土地上，两个世界相互依存，却又各自为战。"</p>
@@ -194,22 +235,16 @@ window.onload = function() {
 
       <!-- 皮尔特沃夫内容 -->
       <div class="piltover-section">
-        <h3>皮尔特沃夫的优势</h3>
-        <ul>
-          <li>科技进步迅速，引领未来的创新。</li>
-          <li>教育体系完善，培养了无数杰出人才。</li>
-          <li>法律秩序严明，保障了公民的权利。</li>
-        </ul>
+        <h3>皮尔特沃夫：科学之光</h3>
+        <p>在这里，每一缕晨曦都映照出无数科学家们努力探索未知的身影。街道两旁林立的高塔不仅是城市的地标，更是人类对未来的承诺。皮尔特沃夫，这座充满希望的城市，用它无尽的创造力编织着一个又一个奇迹。</p>
+        <p>从机械之心到生物工程，这里的人们不断挑战极限，试图解锁宇宙的秘密。教育体系完善，培养了无数杰出人才；法律秩序严明，保障了公民的权利。这里是梦想家的乐园，每一个角落都充满了无限可能。</p>
       </div>
 
       <!-- 祖安内容 -->
       <div class="zaun-section">
-        <h3>祖安的特色</h3>
-        <ul>
-          <li>化学技术发达，孕育了独特的工业文明。</li>
-          <li>地下文化繁荣，展现了别样的生活风貌。</li>
-          <li>社区紧密联系，邻里间充满互助精神。</li>
-        </ul>
+        <h3>祖安：暗影中的力量</h3>
+        <p>地下深处，化学的力量被探索和利用，塑造了一个与众不同的文明。祖安，这个隐藏在黑暗中的巨人，以其独特的工业文化和神秘的传统吸引着好奇的目光。</p>
+        <p>这里的空气中弥漫着化学品的味道，但正是这种味道孕育了别样的生命形态。社区紧密联系，邻里间充满互助精神。尽管表面之下暗流涌动，但正是这些看不见的力量支撑起了这座城市的脊梁。</p>
       </div>
 
       <h4>术语解释</h4>
@@ -221,10 +256,10 @@ window.onload = function() {
       </dl>
 
       <h5>故事的关键点</h5>
-      <p>在一场决定性的冲突中，<strong>皮尔特沃夫</strong>和<strong>祖安</strong>必须联合起来对抗共同的敌人。这场战斗不仅是力量的较量，更是智慧和勇气的考验。</p>
+      <p>在一场决定性的冲突中，<strong>皮尔特沃夫</strong>和<strong>祖安</strong>必须联合起来对抗共同的敌人。这场战斗不仅是力量的较量，更是智慧和勇气的考验。当黎明的第一缕阳光洒下，两个世界的命运将在此刻交织。</p>
 
       <h6>历史转折</h6>
-      <p>最终，双方意识到合作的重要性，并形成了前所未有的联盟。<em>这是和平的新篇章</em>。</p>
+      <p>最终，双方意识到合作的重要性，并形成了前所未有的联盟。<em>这是和平的新篇章</em>。随着双城之间桥梁的建立，一个新的时代悄然来临，而这一切都是因为人们愿意放下偏见，携手前行。</p>
 
       <p>注释：<ruby>和<rt>平</rt></ruby>是双方共同追求的目标。</p>
 
@@ -233,42 +268,41 @@ window.onload = function() {
       <!-- 新增内容 -->
       <h3>重要人物</h3>
       <div class="character">
-        <img src="path/to/image-of-viktor.jpg" alt="维克托肖像">
+        <img src="https://example.com/path/to/image-of-viktor.jpg" alt="维克托肖像">
         <div>
           <h4>维克托 - 科技先锋</h4>
-          <p>作为皮尔特沃夫著名的科学家，维克托致力于通过科技改善人类生活。他的发明不仅推动了城市的进步，也带来了深刻的道德思考。</p>
+          <p>作为皮尔特沃夫著名的科学家，维克托致力于通过科技改善人类生活。他的发明不仅推动了城市的进步，也带来了深刻的道德思考。他相信，只有不断前进，才能找到真正的答案。</p>
         </div>
       </div>
       <div class="character">
-        <img src="path/to/image-of-vi.jpg" alt="蔚肖像">
+        <img src="https://example.com/path/to/image-of-vi.jpg" alt="蔚肖像">
         <div>
           <h4>蔚 - 执法官</h4>
-          <p>蔚是一位来自皮尔特沃夫底层的执法官，她以力量和正义感著称。她的目标是维护城市的和平与秩序，在双城之战中扮演了关键角色。</p>
+          <p>蔚是一位来自皮尔特沃夫底层的执法官，她以力量和正义感著称。她的目标是维护城市的和平与秩序，在双城之战中扮演了关键角色。她是街头巷尾的守护者，也是希望的象征。</p>
         </div>
       </div>
       <div class="character">
-        <img src="path/to/image-of-jinx.jpg" alt="金克斯肖像">
+        <img src="https://example.com/path/to/image-of-jinx.jpg" alt="金克斯肖像">
         <div>
           <h4>金克斯 - 混乱制造者</h4>
-          <p>金克斯的行为往往带来混乱和灾难，但她也是双城之战故事中不可或缺的一部分。她的存在揭示了社会问题和个人成长的主题。</p>
+          <p>金克斯的行为往往带来混乱和灾难，但她也是双城之战故事中不可或缺的一部分。她的存在揭示了社会问题和个人成长的主题。在这个过程中，她逐渐找到了自己的位置，成为了改变的催化剂。</p>
         </div>
       </div>
       <div class="character">
-        <img src="path/to/image-of-caitlyn.jpg" alt="凯特琳肖像">
+        <img src="https://example.com/path/to/image-of-caitlyn.jpg" alt="凯特琳肖像">
         <div>
           <h4>凯特琳 - 警长</h4>
-          <p>作为皮尔特沃夫警长，凯特琳负责维持城市的安全。她在调查过程中发现了影响两城关系的重要线索，对于解决冲突起到了重要作用。</p>
+          <p>作为皮尔特沃夫警长，凯特琳负责维持城市的安全。她在调查过程中发现了影响两城关系的重要线索，对于解决冲突起到了重要作用。她既是公正的化身，也是连接两个世界的桥梁。</p>
         </div>
       </div>
 
       <h3>更多故事片段</h3>
       <p>在这场战争中，有无数英雄的故事。例如，一位年轻的图书管理员在战火中保护了珍贵的历史文献；又比如一位老工匠用最后的力量修复了一座古老的桥梁，使得援军能够顺利抵达。</p>
-
-      <p>这些个人的故事构成了双城之战的宏大叙事，它们证明了即使是普通人，在关键时刻也可以成为改变历史的英雄。</p>
+      <p>这些个人的故事构成了双城之战的宏大叙事，它们证明了即使是普通人，在关键时刻也可以成为改变历史的英雄。每个小人物的背后都有着大大的故事，他们用自己的方式书写着属于这个时代的历史。</p>
 
       <h3>互动环节</h3>
       <div class="interactive">
-        <p>您认为哪位角色对双城之战的影响最大？请投票：</p>
+        <p>哪位角色最能触动你的心弦？请投下您的一票：</p>
         <button onclick="alert('感谢您的投票！')">维克托</button>
         <button onclick="alert('感谢您的投票！')">蔚</button>
         <button onclick="alert('感谢您的投票！')">金克斯</button>
@@ -290,6 +324,26 @@ window.onload = function() {
         <p>"当双城携手共进，没有什么困难是无法克服的。"</p>
       </div>
 
+      <!-- 新增互动元素 -->
+      <section class="user-interactions">
+        <h3>分享你的故事</h3>
+        <p>每个人都有自己的故事，也许你也曾经历过类似的抉择与挑战。现在，是时候让我们听到你的声音了。请在这里留下你的想法或经历，与我们一同探讨双城之间的故事。</p>
+        <textarea placeholder="写下你的故事..."></textarea>
+        <button onclick="alert('感谢分享！')">提交</button>
+      </section>
+
+      <section class="faq">
+        <h3>常见问题解答</h3>
+        <details>
+          <summary>什么是双城之战？</summary>
+          <p>双城之战是指发生在皮尔特沃夫与祖安之间的系列事件，展现了这两个截然不同但又紧密相连的城市如何面对外部威胁，以及内部矛盾的解决方案。</p>
+        </details>
+        <details>
+          <summary>有哪些主要角色？</summary>
+          <p>主要角色包括维克托、蔚、金克斯和凯特琳等人。每位角色都有自己独特的故事线，他们在冲突中扮演了至关重要的角色。</p>
+        </details>
+        <!-- 可根据需要添加更多FAQ -->
+      </section>
     </article>
   </section>
 

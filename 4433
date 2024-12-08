@@ -4,26 +4,124 @@
 <meta charset="UTF-8">
 <title>双城之战：皮尔特沃夫与祖安的互动</title>
 <style>
-body { font-family: 'Georgia', serif; background-color: #f4f4f4; margin: 0; padding: 0; color: #333; }
+body { 
+  font-family: 'Georgia', serif; 
+  background-color: #1e1e2f; /* 深邃的夜空背景 */
+  margin: 0; 
+  padding: 0; 
+  color: #e0e0e0; /* 浅灰文字颜色 */
+}
 .container { width: 80%; margin: auto; overflow: hidden; }
-.header, .footer { background: #2c3e50; color: #fff; padding: 1em 0; text-align: center; }
-.content { padding: 20px; background: #fff; margin-top: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
-h1, h2, h3, h4, h5, h6 { color: #2c3e50; margin-bottom: 10px; }
-mark { background-color: #ffeb3b; padding: 2px; }
-p { line-height: 1.6; margin-bottom: 15px; }
-ul, ol { list-style-position: inside; margin-left: 20px; }
-dl dt { font-weight: bold; }
-ruby rt { font-size: smaller; }
-sup, sub { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+.header, .footer { 
+  background: linear-gradient(90deg, #4A148C, #6200EA); /* 祖安紫色到皮尔特沃夫紫色的渐变 */
+  color: #fff; 
+  padding: 1em 0; 
+  text-align: center; 
+}
+.content { 
+  padding: 20px; 
+  background: #fff; 
+  margin-top: 20px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+h1, h2, h3, h4, h5, h6 { 
+  color: #2c3e50; 
+  margin-bottom: 10px; 
+}
+mark { 
+  background-color: #ffeb3b; 
+  padding: 2px; 
+}
+p { 
+  line-height: 1.6; 
+  margin-bottom: 15px; 
+}
+ul, ol { 
+  list-style-position: inside; 
+  margin-left: 20px; 
+}
+dl dt { 
+  font-weight: bold; 
+}
+ruby rt { 
+  font-size: smaller; 
+}
+sup, sub { 
+  font-size: 75%; 
+  line-height: 0; 
+  position: relative; 
+  vertical-align: baseline; 
+}
 sup { top: -0.5em; }
 sub { bottom: -0.25em; }
-.character { display: flex; align-items: center; margin-bottom: 20px; }
-.character img { width: 100px; height: auto; margin-right: 20px; border-radius: 50%; }
-.interactive { margin-top: 20px; }
-.interactive button { background-color: #3498db; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; transition: background-color 0.3s; }
-.interactive button:hover { background-color: #2980b9; }
-.quote { font-style: italic; font-size: 1.2em; color: #7f8c8d; margin: 20px 0; }
-.blockquote { background-color: #ecf0f1; padding: 15px; border-left: 5px solid #3498db; margin: 20px 0; }
+.character { 
+  display: flex; 
+  align-items: center; 
+  margin-bottom: 20px; 
+}
+.character img { 
+  width: 100px; 
+  height: auto; 
+  margin-right: 20px; 
+  border-radius: 50%; 
+}
+.interactive { 
+  margin-top: 20px; 
+}
+.interactive button { 
+  background-color: #6200EA; /* 祖安紫色按钮 */
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  transition: background-color 0.3s; 
+}
+.interactive button:hover { 
+  background-color: #4A148C; /* 按钮悬停时更深的祖安紫色 */
+}
+.quote { 
+  font-style: italic; 
+  font-size: 1.2em; 
+  color: #B39DDB; /* 紫色引用文字 */
+  margin: 20px 0; 
+}
+.blockquote { 
+  background-color: #ecf0f1; 
+  padding: 15px; 
+  border-left: 5px solid #6200EA; /* 紫色边框 */
+  margin: 20px 0; 
+}
+
+/* 新增部分 */
+.piltover-section {
+  background-color: #ECEFF1; /* 皮尔特沃夫浅蓝灰色 */
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.zaun-section {
+  background-color: #3E2723; /* 祖安深棕色 */
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.piltover-section h3, .zaun-section h3 {
+  color: #2c3e50;
+}
+
+.piltover-section p, .zaun-section p {
+  color: #333;
+}
+
+.piltover-section ul, .zaun-section ul {
+  color: #333;
+}
+
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -44,19 +142,25 @@ sub { bottom: -0.25em; }
         <footer>- 双城智者</footer>
       </blockquote>
 
-      <h3>皮尔特沃夫的优势</h3>
-      <ul>
-        <li>科技进步迅速，引领未来的创新。</li>
-        <li>教育体系完善，培养了无数杰出人才。</li>
-        <li>法律秩序严明，保障了公民的权利。</li>
-      </ul>
+      <!-- 皮尔特沃夫内容 -->
+      <div class="piltover-section">
+        <h3>皮尔特沃夫的优势</h3>
+        <ul>
+          <li>科技进步迅速，引领未来的创新。</li>
+          <li>教育体系完善，培养了无数杰出人才。</li>
+          <li>法律秩序严明，保障了公民的权利。</li>
+        </ul>
+      </div>
 
-      <h3>祖安的特色</h3>
-      <ol>
-        <li>化学技术发达，孕育了独特的工业文明。</li>
-        <li>地下文化繁荣，展现了别样的生活风貌。</li>
-        <li>社区紧密联系，邻里间充满互助精神。</li>
-      </ol>
+      <!-- 祖安内容 -->
+      <div class="zaun-section">
+        <h3>祖安的特色</h3>
+        <ul>
+          <li>化学技术发达，孕育了独特的工业文明。</li>
+          <li>地下文化繁荣，展现了别样的生活风貌。</li>
+          <li>社区紧密联系，邻里间充满互助精神。</li>
+        </ul>
+      </div>
 
       <h4>术语解释</h4>
       <dl>

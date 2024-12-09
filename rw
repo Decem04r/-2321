@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>双城之诗：皮尔特沃夫与祖安的交响</title>
+<style>
+body {
+  font-family: 'Georgia', serif;
+  background: url('https://example.com/path/to/graffiti-wall.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #e0e0e0;
+  margin: 0; padding: 0;
+}
+.container { width: 85%; max-width: 1400px; margin: auto; }
+.header, .footer {
+  background: linear-gradient(90deg, #6A1B9A, #AB47BC); /* 更明亮且多样的紫色渐变 */
+  color: #fff;
+  padding: 1em 0;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+}
+.content {
+  padding: 20px;
+  background: rgba(255,255,255,0.9);
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #424242;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+.character {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.character img {
+  width: 90px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+}
+.interactive button {
+  background-color: #AB47BC;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-size: 1rem;
+}
+.interactive button:hover { background-color: #6A1B9A; }
+
+/* 新增部分 */
+.piltover-section, .zaun-section {
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.piltover-section { background-color: rgba(236,239,241,0.8); }
+.zaun-section { background-color: rgba(62,39,35,0.8); color: #ffffff; }
+
+.quote {
+  font-style: italic;
+  font-size: 1.2em;
+  color: #CE93D8;
+  margin: 20px 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container { width: 95%; }
+  .character img { width: 80px; }
+}
+
+.icon-container {
+  display: inline-block;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 50%;
+  margin: 5px;
+  transition: transform 0.3s;
+}
+.icon-container:hover { transform: scale(1.1); }
+
+.highlight {
+  background-color: #CE93D8;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.comments {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.comment {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 5px;
+}
+.add-comment input[type="text"], .add-comment textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.add-comment button {
+  background-color: #AB47BC;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.add-comment button:hover { background-color: #6A1B9A; }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<script>
+function updateVotes() {
+  const votes = {"维克托": 45, "蔚": 30, "金克斯": 15, "凯特琳": 10};
+  let totalVotes = Object.values(votes).reduce((a, b) => a + b, 0);
+
+  for (let character in votes) {
+    let percentage = (votes[character] / totalVotes) * 100;
+    document.querySelector(`#${character}-bar`).style.width = `${percentage}%`;
+    document.querySelector(`#${character}-label`).innerText = `${character}: ${votes[character]}票 (${percentage.toFixed(1)}%)`;
+  }
+}
+
+window.onload = function() {
+  updateVotes();
+};
+
+function addComment() {
+  const author = document.getElementById('comment-author').value;
+  const text = document.getElementById('comment-text').value;
+
+  if (!author || !text) return;
+
+  const commentSection = document.querySelector('.comments');
+  const newComment = document.createElement('div');
+  newComment.classList.add('comment');
+
+  newComment.innerHTML = `
+    <span class="comment-author">${author}</span>
+    <span class="comment-date">${new Date().toLocaleString()}</span>
+    <p class="comment-text">${text}</p>
+  `;
+
+  commentSection.insertBefore(newComment, commentSection.firstChild);
+
+  document.getElementById('comment-author').value = '';
+  document.getElementById('comment-text').value = '';
+}
+</script>
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <h1><i class="fas fa-paint-brush"></i> 双城之诗：<span class="highlight">皮尔特沃夫</span>与<span class="highlight">祖安</span>的交响</h1>
+  </header>
+
+  <section class="content">
+    <article>
+      <h2>序章：光明与暗影的对话</h2>
+      <p>在这片土地上，<mark>皮尔特沃夫</mark>与<mark>祖安</mark>如同两颗并存的星辰，各自闪耀着独特的光芒。</p>
+
+      <!-- 简化后的内容 -->
+      <div class="piltover-section">
+        <h3>皮尔特沃夫：科学之光</h3>
+        <p>这里是梦想家的乐园，每一寸土地都散发着创新的气息，从机械之心到生物工程，这里的人们不断挑战极限。</p>
+      </div>
+
+      <div class="zaun-section">
+        <h3>祖安：暗影中的力量</h3>
+        <p>地下深处，化学的力量孕育了别样的生命形态，社区紧密联系，邻里间充满互助精神。</p>
+      </div>
+
+      <h3>重要人物</h3>
+      <div class="character">
+        <img src="https://example.com/path/to/image-of-viktor.jpg" alt="维克托肖像">
+        <div>
+          <h4>维克托 - 科技先锋</h4>
+          <p>致力于通过科技改善人类生活，他的发明不仅推动了城市的进步，也带来了深刻的道德思考。</p>
+        </div>
+      </div>
+      <!-- 其他角色类似处理 -->
+
+      <h3>互动环节</h3>
+      <div class="interactive">
+        <p>哪位角色最能触动你的心弦？请投下您的一票：</p>
+        <button onclick="alert('感谢您的投票！')"><i class="fas fa-hand-paper"></i> 维克托</button>
+        <button onclick="alert('感谢您的投票！')"><i class="fas fa-fist-raised"></i> 蔚</button>
+        <button onclick="alert('感谢您的投票！')"><i class="fas fa-laugh-beam"></i> 金克斯</button>
+        <button onclick="alert('感谢您的投票！')"><i class="fas fa-bullseye"></i> 凯特琳</button>
+      </div>
+
+      <div class="comments">
+        <h3>分享你的想法</h3>
+        <form class="add-comment">
+          <input type="text" id="comment-author" placeholder="作者名称" required>
+          <textarea id="comment-text" placeholder="写下你的评论..." required></textarea>
+          <button type="button" onclick="addComment()">发表评论</button>
+        </form>
+        <!-- 评论列表 -->
+      </div>
+    </article>
+  </section>
+  <footer class="footer">
+    <p>&copy; 2024 双城之诗版权所有</p>
+  </footer>
+</div>
+</body>
+</html>

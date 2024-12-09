@@ -222,6 +222,58 @@ p + p {
   margin-top: 15px;
 }
 
+/* 评论区样式 */
+.comments {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comment {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 5px;
+}
+
+.comment-author {
+  font-weight: bold;
+  color: #7C4DFF;
+}
+
+.comment-date {
+  font-size: 0.8em;
+  color: #9E9E9E;
+}
+
+.comment-text {
+  margin-top: 5px;
+}
+
+.add-comment input[type="text"], .add-comment textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-comment button {
+  background-color: #7C4DFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.add-comment button:hover {
+  background-color: #5E35B1;
+}
+
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <script>
@@ -245,6 +297,31 @@ function updateVotes() {
 window.onload = function() {
   updateVotes();
 };
+
+// 模拟评论功能
+function addComment() {
+  const author = document.getElementById('comment-author').value;
+  const text = document.getElementById('comment-text').value;
+
+  if (!author || !text) return;
+
+  const commentSection = document.querySelector('.comments');
+  const newComment = document.createElement('div');
+  newComment.classList.add('comment');
+
+  newComment.innerHTML = `
+    <span class="comment-author">${author}</span>
+    <span class="comment-date">${new Date().toLocaleString()}</span>
+    <p class="comment-text">${text}</p>
+  `;
+
+  commentSection.insertBefore(newComment, commentSection.firstChild);
+
+  // 清空输入框
+  document.getElementById('comment-author').value = '';
+  document.getElementById('comment-text').value = '';
+}
+
 </script>
 </head>
 <body>
@@ -375,25 +452,116 @@ window.onload = function() {
         </details>
         <!-- 可根据需要添加更多FAQ -->
       </section>
-    </article>
-  </section>
 
-  <footer class="footer">
-    <p>&copy; 2024 双城之战官方网站. 版权所有.</p>
-  </footer>
-</div>
-
-<!-- 图标展示 -->
-<section class="icon-showcase">
-  <h2>发现更多图标<i class="fas fa-angle-down"></i></h2>
-  <div class="icons">
-    <a href="#" class="icon-container"><i class="fas fa-code"></i></a>
-    <a href="#" class="icon-container"><i class="fas fa-flask"></i></a>
-    <a href="#" class="icon-container"><i class="fas fa-gavel"></i></a>
-    <a href="#" class="icon-container"><i class="fas fa-microscope"></i></a>
-    <a href="#" class="icon-container"><i class="fas fa-cogs"></i></a>
+      <section class="comments">
+  <h3>用户评论</h3>
+  <div class="add-comment">
+    <input type="text" id="comment-author" placeholder="你的名字...">
+    <textarea id="comment-text" placeholder="写下你的评论..."></textarea>
+    <button onclick="addComment()"><i class="fas fa-comment-dots"></i> 发表评论</button>
+  </div>
+  <div class="comments-list" id="comments-list">
+    <!-- 用户评论将动态添加到这里 -->
   </div>
 </section>
 
-</body>
-</html>
+<script>
+function addComment() {
+  let author = document.getElementById('comment-author').value.trim();
+  let commentText = document.getElementById('comment-text').value.trim();
+
+  if (author && commentText) {
+    // 创建新的评论元素
+    let newComment = document.createElement('div');
+    newComment.className = 'comment-item';
+    newComment.innerHTML = `
+      <strong>${author}</strong>: ${commentText}
+      <span class="comment-time">${new Date().toLocaleString()}</span>
+    `;
+
+    // 将新评论添加到评论列表中
+    document.getElementById('comments-list').appendChild(newComment);
+
+    // 清空输入框
+    document.getElementById('comment-author').value = '';
+    document.getElementById('comment-text').value = '';
+  } else {
+    alert('请填写完整的评论信息');
+  }
+}
+</script>
+
+<style>
+.comments {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 10px;
+}
+
+.add-comment {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.add-comment input, .add-comment textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-comment button {
+  background-color: #7C4DFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.add-comment button:hover {
+  background-color: #5E35B1;
+}
+
+.comment-item {
+  background-color: rgba(255,255,255,0.9);
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment-time {
+  font-size: 0.8em;
+  color: #999;
+  float: right;
+}
+</style>
+<section class="faq">
+  <h3>常见问题解答</h3>
+  <details>
+    <summary><i class="fas fa-question-circle"></i> 什么是双城之战？</summary>
+    <p>双城之战是指发生在皮尔特沃夫与祖安之间的系列事件，展现了这两个截然不同但又紧密相连的城市如何面对外部威胁，以及内部矛盾的解决方案。</p>
+  </details>
+  <details>
+    <summary><i class="fas fa-users"></i> 有哪些主要角色？</summary>
+    <p>主要角色包括维克托、蔚、金克斯和凯特琳等人。每位角色都有自己独特的故事线，他们在冲突中扮演了至关重要的角色。</p>
+  </details>
+  <details>
+    <summary><i class="fas fa-map-signs"></i> 双城之战的主要地点有哪些？</summary>
+    <p>故事发生的地点主要包括皮尔特沃夫的科技中心、祖安的地下工坊以及连接两座城市的桥梁。这些地方不仅是战斗的焦点，也是角色们成长和改变的重要场所。</p>
+  </details>
+  <details>
+    <summary><i class="fas fa-lightbulb"></i> 如何参与双城之战的讨论？</summary>
+    <p>你可以通过我们的网站留言、发表评论或是在社交媒体平台上加入相关话题讨论。我们欢迎所有对双城故事感兴趣的朋友一起分享见解和感受。</p>
+  </details>
+  <!-- 可根据需要添加更多FAQ -->
+</section>
+<footer class="footer">
+  <p>&copy; 2024 双城之战官方网站. 版权所有.</p>
+</footer>
+</div>

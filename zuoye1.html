@@ -6,7 +6,7 @@
 <style>
 body { 
   font-family: 'Georgia', serif; 
-  background-image: url('https://example.com/path/to/starry-sky.jpg'); /* 使用一张夜空星图作为背景 */
+  background-image: url('https://example.com/path/to/graffiti-wall.jpg'); /* 使用一张具有油画喷漆质感的涂鸦墙作为背景 */
   background-size: cover;
   background-attachment: fixed;
   margin: 0; 
@@ -19,10 +19,11 @@ body {
   color: #fff; 
   padding: 1em 0; 
   text-align: center; 
+  border-radius: 0 0 10px 10px;
 }
 .content { 
   padding: 20px; 
-  background: rgba(255,255,255,0.9); /* 半透明白色背景 */
+  background: rgba(255,255,255,0.85); /* 半透明白色背景 */
   margin-top: 20px; 
   border-radius: 10px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
@@ -191,6 +192,36 @@ sub { bottom: -0.25em; }
   .character img { width: 80px; }
 }
 
+/* 美化图标 */
+i {
+  margin-right: 5px;
+}
+
+.icon-container {
+  display: inline-block;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 50%;
+  margin: 5px;
+  transition: transform 0.3s;
+}
+
+.icon-container:hover {
+  transform: scale(1.1);
+}
+
+/* 高亮文本 */
+.highlight {
+  background-color: #ffeb3b;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+/* 文章段落间距 */
+p + p {
+  margin-top: 15px;
+}
+
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <script>
@@ -220,7 +251,7 @@ window.onload = function() {
 
 <div class="container">
   <header class="header">
-    <h1>双城之诗：皮尔特沃夫与祖安的交响</h1>
+    <h1><i class="fas fa-paint-brush"></i> 双城之诗：<span class="highlight">皮尔特沃夫</span>与<span class="highlight">祖安</span>的交响</h1>
   </header>
 
   <section class="content">
@@ -303,10 +334,10 @@ window.onload = function() {
       <h3>互动环节</h3>
       <div class="interactive">
         <p>哪位角色最能触动你的心弦？请投下您的一票：</p>
-        <button onclick="alert('感谢您的投票！')">维克托</button>
-        <button onclick="alert('感谢您的投票！')">蔚</button>
-        <button onclick="alert('感谢您的投票！')">金克斯</button>
-        <button onclick="alert('感谢您的投票！')">凯特琳</button>
+        <button onclick="alert('感谢您的投票！')"><i class="fas fa-hand-paper"></i> 维克托</button>
+        <button onclick="alert('感谢您的投票！')"><i class="fas fa-fist-raised"></i> 蔚</button>
+        <button onclick="alert('感谢您的投票！')"><i class="fas fa-laugh-beam"></i> 金克斯</button>
+        <button onclick="alert('感谢您的投票！')"><i class="fas fa-bullseye"></i> 凯特琳</button>
       </div>
 
       <div class="vote-result">
@@ -329,17 +360,17 @@ window.onload = function() {
         <h3>分享你的故事</h3>
         <p>每个人都有自己的故事，也许你也曾经历过类似的抉择与挑战。现在，是时候让我们听到你的声音了。请在这里留下你的想法或经历，与我们一同探讨双城之间的故事。</p>
         <textarea placeholder="写下你的故事..."></textarea>
-        <button onclick="alert('感谢分享！')">提交</button>
+        <button onclick="alert('感谢分享！')"><i class="fas fa-share-square"></i> 提交</button>
       </section>
 
       <section class="faq">
         <h3>常见问题解答</h3>
         <details>
-          <summary>什么是双城之战？</summary>
+          <summary><i class="fas fa-question-circle"></i> 什么是双城之战？</summary>
           <p>双城之战是指发生在皮尔特沃夫与祖安之间的系列事件，展现了这两个截然不同但又紧密相连的城市如何面对外部威胁，以及内部矛盾的解决方案。</p>
         </details>
         <details>
-          <summary>有哪些主要角色？</summary>
+          <summary><i class="fas fa-users"></i> 有哪些主要角色？</summary>
           <p>主要角色包括维克托、蔚、金克斯和凯特琳等人。每位角色都有自己独特的故事线，他们在冲突中扮演了至关重要的角色。</p>
         </details>
         <!-- 可根据需要添加更多FAQ -->
@@ -351,6 +382,18 @@ window.onload = function() {
     <p>&copy; 2024 双城之战官方网站. 版权所有.</p>
   </footer>
 </div>
+
+<!-- 图标展示 -->
+<section class="icon-showcase">
+  <h2>发现更多图标<i class="fas fa-angle-down"></i></h2>
+  <div class="icons">
+    <a href="#" class="icon-container"><i class="fas fa-code"></i></a>
+    <a href="#" class="icon-container"><i class="fas fa-flask"></i></a>
+    <a href="#" class="icon-container"><i class="fas fa-gavel"></i></a>
+    <a href="#" class="icon-container"><i class="fas fa-microscope"></i></a>
+    <a href="#" class="icon-container"><i class="fas fa-cogs"></i></a>
+  </div>
+</section>
 
 </body>
 </html>
